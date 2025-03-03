@@ -1,10 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import '/flutter_flow/custom_functions.dart' as functions;
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'final_player_card_model.dart';
 export 'final_player_card_model.dart';
@@ -62,7 +59,7 @@ class _FinalPlayerCardWidgetState extends State<FinalPlayerCardWidget> {
         border: Border.all(
           color: functions
                       .getIndexOfString(
-                          widget!.playerName!, FFAppState().playerList.toList())
+                          widget.playerName!, FFAppState().playerList.toList())
                       .toString() ==
                   '0'
               ? FlutterFlowTheme.of(context).warning
@@ -88,7 +85,7 @@ class _FinalPlayerCardWidgetState extends State<FinalPlayerCardWidget> {
                         text: valueOrDefault<String>(
                           (valueOrDefault<int>(
                                     functions.getIndexOfString(
-                                        widget!.playerName!,
+                                        widget.playerName!,
                                         FFAppState().playerList.toList()),
                                     0,
                                   ) +
@@ -104,7 +101,7 @@ class _FinalPlayerCardWidgetState extends State<FinalPlayerCardWidget> {
                       ),
                       TextSpan(
                         text: valueOrDefault<String>(
-                          widget!.playerName,
+                          widget.playerName,
                           'Joe',
                         ),
                         style: TextStyle(),
@@ -119,7 +116,7 @@ class _FinalPlayerCardWidgetState extends State<FinalPlayerCardWidget> {
                 ),
                 Text(
                   valueOrDefault<String>(
-                    widget!.score?.toString(),
+                    widget.score?.toString(),
                     '10',
                   ),
                   textAlign: TextAlign.end,
@@ -156,7 +153,7 @@ class _FinalPlayerCardWidgetState extends State<FinalPlayerCardWidget> {
                             text: valueOrDefault<String>(
                               ((List<int> allPoints) {
                                 return allPoints.where((num) => num > 0).length;
-                              }(widget!.allPoints!.toList()))
+                              }(widget.allPoints!.toList()))
                                   .toString(),
                               '1',
                             ),
@@ -183,7 +180,7 @@ class _FinalPlayerCardWidgetState extends State<FinalPlayerCardWidget> {
                                     .where((num) => (num ?? 0) > 0)
                                     .fold<int>(
                                         0, (sum, num) => sum + (num ?? 0));
-                              }(widget!.allPoints!.toList()))
+                              }(widget.allPoints!.toList()))
                                   .toString(),
                               '10',
                             ),
@@ -228,7 +225,7 @@ class _FinalPlayerCardWidgetState extends State<FinalPlayerCardWidget> {
                             text: valueOrDefault<String>(
                               ((List<int> allPoints) {
                                 return allPoints.where((num) => num < 0).length;
-                              }(widget!.allPoints!.toList()))
+                              }(widget.allPoints!.toList()))
                                   .toString(),
                               '1',
                             ),
@@ -249,7 +246,7 @@ class _FinalPlayerCardWidgetState extends State<FinalPlayerCardWidget> {
                                     .where((num) => (num ?? 0) < 0)
                                     .fold<int>(
                                         0, (sum, num) => sum + (num ?? 0));
-                              }(widget!.allPoints!.toList()))
+                              }(widget.allPoints!.toList()))
                                   .toString(),
                               '10',
                             ),

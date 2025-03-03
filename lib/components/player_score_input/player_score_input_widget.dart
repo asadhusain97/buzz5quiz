@@ -1,12 +1,9 @@
-import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'player_score_input_model.dart';
 export 'player_score_input_model.dart';
@@ -98,11 +95,11 @@ class _PlayerScoreInputWidgetState extends State<PlayerScoreInputWidget> {
                               if (_model.lastAnsNeg!) {
                                 // add points
                                 FFAppState().updatePlayerListAtIndex(
-                                  widget!.index!,
+                                  widget.index!,
                                   (e) => e
-                                    ..incrementScore(widget!.points)
+                                    ..incrementScore(widget.points)
                                     ..updateAllPoints(
-                                      (e) => e.remove((-1) * widget!.points),
+                                      (e) => e.remove((-1) * widget.points),
                                     ),
                                 );
                                 safeSetState(() {});
@@ -115,11 +112,11 @@ class _PlayerScoreInputWidgetState extends State<PlayerScoreInputWidget> {
                             } else {
                               // minus points
                               FFAppState().updatePlayerListAtIndex(
-                                widget!.index!,
+                                widget.index!,
                                 (e) => e
-                                  ..incrementScore((-1) * widget!.points)
+                                  ..incrementScore((-1) * widget.points)
                                   ..updateAllPoints(
-                                    (e) => e.add((-1) * widget!.points),
+                                    (e) => e.add((-1) * widget.points),
                                   ),
                               );
                               safeSetState(() {});
@@ -163,7 +160,7 @@ class _PlayerScoreInputWidgetState extends State<PlayerScoreInputWidget> {
                 Align(
                   alignment: AlignmentDirectional(0.0, 0.0),
                   child: Text(
-                    widget!.playerName.maybeHandleOverflow(
+                    widget.playerName.maybeHandleOverflow(
                       maxChars: 10,
                       replacement: '…',
                     ),
@@ -185,11 +182,11 @@ class _PlayerScoreInputWidgetState extends State<PlayerScoreInputWidget> {
                               if (_model.lastAnsPos!) {
                                 // undo add points
                                 FFAppState().updatePlayerListAtIndex(
-                                  widget!.index!,
+                                  widget.index!,
                                   (e) => e
-                                    ..incrementScore((-1) * widget!.points)
+                                    ..incrementScore((-1) * widget.points)
                                     ..updateAllPoints(
-                                      (e) => e.remove(widget!.points),
+                                      (e) => e.remove(widget.points),
                                     ),
                                 );
                                 safeSetState(() {});
@@ -211,11 +208,11 @@ class _PlayerScoreInputWidgetState extends State<PlayerScoreInputWidget> {
                             } else {
                               // add points
                               FFAppState().updatePlayerListAtIndex(
-                                widget!.index!,
+                                widget.index!,
                                 (e) => e
-                                  ..incrementScore(widget!.points)
+                                  ..incrementScore(widget.points)
                                   ..updateAllPoints(
-                                    (e) => e.add(widget!.points),
+                                    (e) => e.add(widget.points),
                                   ),
                               );
                               safeSetState(() {});
@@ -225,7 +222,7 @@ class _PlayerScoreInputWidgetState extends State<PlayerScoreInputWidget> {
                               _model.isPressed = !_model.isPressed;
                               safeSetState(() {});
                               FFAppState().addToLastAnsCorrectPlayer(
-                                  widget!.playerName);
+                                  widget.playerName);
                               safeSetState(() {});
                             }
                           },

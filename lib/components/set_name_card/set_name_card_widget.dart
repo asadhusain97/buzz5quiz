@@ -2,8 +2,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'set_name_card_model.dart';
 export 'set_name_card_model.dart';
 
@@ -62,7 +60,7 @@ class _SetNameCardWidgetState extends State<SetNameCardWidget> {
         child: Padding(
           padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 5.0, 0.0),
           child: AutoSizeText(
-            widget!.setname,
+            widget.setname,
             textAlign: TextAlign.center,
             minFontSize: 8.0,
             style: FlutterFlowTheme.of(context).bodyMedium.override(

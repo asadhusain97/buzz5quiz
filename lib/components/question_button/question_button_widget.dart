@@ -1,10 +1,7 @@
 import '/components/question_page/question_page_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'question_button_model.dart';
 export 'question_button_model.dart';
 
@@ -77,12 +74,12 @@ class _QuestionButtonWidgetState extends State<QuestionButtonWidget> {
               return Padding(
                 padding: MediaQuery.viewInsetsOf(context),
                 child: QuestionPageWidget(
-                  question: widget!.question,
-                  answer: widget!.answer,
-                  setname: widget!.setname,
-                  point: widget!.qpoints,
-                  qmedia: widget!.questionMedia!,
-                  amedia: widget!.answerMedia!,
+                  question: widget.question,
+                  answer: widget.answer,
+                  setname: widget.setname,
+                  point: widget.qpoints,
+                  qmedia: widget.questionMedia!,
+                  amedia: widget.answerMedia!,
                   answerViewed: () async {
                     _model.done = !_model.done;
                     safeSetState(() {});
@@ -124,7 +121,7 @@ class _QuestionButtonWidgetState extends State<QuestionButtonWidget> {
                     padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                     child: Text(
                       valueOrDefault<String>(
-                        widget!.qpoints.toString(),
+                        widget.qpoints.toString(),
                         '0',
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(

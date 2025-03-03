@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'player_score_card_model.dart';
 export 'player_score_card_model.dart';
 
@@ -60,7 +57,7 @@ class _PlayerScoreCardWidgetState extends State<PlayerScoreCardWidget> {
           color: FlutterFlowTheme.of(context).secondaryBackground,
           borderRadius: BorderRadius.circular(12.0),
           border: Border.all(
-            color: widget!.controlPlayer == widget!.playerName
+            color: widget.controlPlayer == widget.playerName
                 ? FlutterFlowTheme.of(context).warning
                 : FlutterFlowTheme.of(context).tertiary,
             width: 2.0,
@@ -75,7 +72,7 @@ class _PlayerScoreCardWidgetState extends State<PlayerScoreCardWidget> {
               Align(
                 alignment: AlignmentDirectional(0.0, 0.0),
                 child: Text(
-                  widget!.playerName.maybeHandleOverflow(
+                  widget.playerName.maybeHandleOverflow(
                     maxChars: 10,
                     replacement: '…',
                   ),
@@ -93,7 +90,7 @@ class _PlayerScoreCardWidgetState extends State<PlayerScoreCardWidget> {
                 child: Text(
                   valueOrDefault<String>(
                     formatNumber(
-                      widget!.playerScore,
+                      widget.playerScore,
                       formatType: FormatType.decimal,
                       decimalType: DecimalType.automatic,
                     ),

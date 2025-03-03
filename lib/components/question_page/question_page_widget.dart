@@ -1,15 +1,11 @@
-import '/backend/schema/structs/index.dart';
 import '/components/player_score_input/player_score_input_widget.dart';
 import '/flutter_flow/flutter_flow_expanded_image_view.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'question_page_model.dart';
 export 'question_page_model.dart';
@@ -120,7 +116,7 @@ class _QuestionPageWidgetState extends State<QuestionPageWidget> {
                     child: Align(
                       alignment: AlignmentDirectional(0.0, 0.0),
                       child: Text(
-                        widget!.setname,
+                        widget.setname,
                         textAlign: TextAlign.start,
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Inter',
@@ -136,7 +132,7 @@ class _QuestionPageWidgetState extends State<QuestionPageWidget> {
                       alignment: AlignmentDirectional(0.0, 0.0),
                       child: Text(
                         valueOrDefault<String>(
-                          widget!.point.toString(),
+                          widget.point.toString(),
                           '0',
                         ),
                         textAlign: TextAlign.start,
@@ -170,14 +166,13 @@ class _QuestionPageWidgetState extends State<QuestionPageWidget> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            if (widget!.question != null &&
-                                widget!.question != '')
+                            if (widget.question != '')
                               Flexible(
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 25.0),
                                   child: Text(
-                                    widget!.question,
+                                    widget.question,
                                     textAlign: TextAlign.center,
                                     maxLines: 10,
                                     style: FlutterFlowTheme.of(context)
@@ -189,7 +184,7 @@ class _QuestionPageWidgetState extends State<QuestionPageWidget> {
                                   ),
                                 ),
                               ),
-                            if (widget!.qmedia != '')
+                            if (widget.qmedia != '')
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 5.0),
@@ -205,24 +200,24 @@ class _QuestionPageWidgetState extends State<QuestionPageWidget> {
                                         type: PageTransitionType.fade,
                                         child: FlutterFlowExpandedImageView(
                                           image: Image.network(
-                                            widget!.qmedia!,
+                                            widget.qmedia!,
                                             fit: BoxFit.contain,
                                             alignment: Alignment(0.0, 0.0),
                                           ),
                                           allowRotation: false,
-                                          tag: widget!.qmedia!,
+                                          tag: widget.qmedia!,
                                           useHeroAnimation: true,
                                         ),
                                       ),
                                     );
                                   },
                                   child: Hero(
-                                    tag: widget!.qmedia!,
+                                    tag: widget.qmedia!,
                                     transitionOnUserGestures: true,
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.network(
-                                        widget!.qmedia!,
+                                        widget.qmedia!,
                                         width: 250.0,
                                         height: 200.0,
                                         fit: BoxFit.scaleDown,
@@ -314,7 +309,7 @@ class _QuestionPageWidgetState extends State<QuestionPageWidget> {
                                                   playerListQItem.name,
                                                   'John Doe',
                                                 ),
-                                                points: widget!.point,
+                                                points: widget.point,
                                                 index: playerListQIndex,
                                               ),
                                             ),
@@ -360,8 +355,7 @@ class _QuestionPageWidgetState extends State<QuestionPageWidget> {
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
-                              if (widget!.answer != null &&
-                                  widget!.answer != '')
+                              if (widget.answer != '')
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       100.0, 10.0, 100.0, 0.0),
@@ -376,7 +370,7 @@ class _QuestionPageWidgetState extends State<QuestionPageWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 20.0),
                                           child: Text(
-                                            widget!.answer,
+                                            widget.answer,
                                             textAlign: TextAlign.center,
                                             maxLines: 8,
                                             style: FlutterFlowTheme.of(context)
@@ -392,7 +386,7 @@ class _QuestionPageWidgetState extends State<QuestionPageWidget> {
                                           ),
                                         ),
                                       ),
-                                      if (widget!.amedia != '')
+                                      if (widget.amedia != '')
                                         Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
@@ -410,26 +404,26 @@ class _QuestionPageWidgetState extends State<QuestionPageWidget> {
                                                   child:
                                                       FlutterFlowExpandedImageView(
                                                     image: Image.network(
-                                                      widget!.amedia!,
+                                                      widget.amedia!,
                                                       fit: BoxFit.contain,
                                                       alignment:
                                                           Alignment(0.0, 0.0),
                                                     ),
                                                     allowRotation: false,
-                                                    tag: widget!.amedia!,
+                                                    tag: widget.amedia!,
                                                     useHeroAnimation: true,
                                                   ),
                                                 ),
                                               );
                                             },
                                             child: Hero(
-                                              tag: widget!.amedia!,
+                                              tag: widget.amedia!,
                                               transitionOnUserGestures: true,
                                               child: ClipRRect(
                                                 borderRadius:
                                                     BorderRadius.circular(8.0),
                                                 child: Image.network(
-                                                  widget!.amedia!,
+                                                  widget.amedia!,
                                                   width: 250.0,
                                                   height: 200.0,
                                                   fit: BoxFit.scaleDown,
