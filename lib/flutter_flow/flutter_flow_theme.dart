@@ -228,62 +228,62 @@ class ThemeTypography extends Typography {
         'Inter',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
-        fontSize: 22.0,
+        fontSize: 8.0,
       );
   String get titleMediumFamily => 'Inter';
   TextStyle get titleMedium => GoogleFonts.getFont(
         'Inter',
         color: theme.info,
         fontWeight: FontWeight.w500,
-        fontSize: 18.0,
+        fontSize: 7.0,
       );
   String get titleSmallFamily => 'Inter';
   TextStyle get titleSmall => GoogleFonts.getFont(
         'Inter',
         color: theme.info,
         fontWeight: FontWeight.w500,
-        fontSize: 16.0,
+        fontSize: 6.0,
       );
   String get labelLargeFamily => 'Inter';
   TextStyle get labelLarge => GoogleFonts.getFont(
         'Inter',
         color: theme.secondaryText,
         fontWeight: FontWeight.w500,
-        fontSize: 16.0,
+        fontSize: 6.0,
       );
   String get labelMediumFamily => 'Inter';
   TextStyle get labelMedium => GoogleFonts.getFont(
         'Inter',
         color: theme.secondaryText,
         fontWeight: FontWeight.w500,
-        fontSize: 14.0,
+        fontSize: 5.0,
       );
   String get labelSmallFamily => 'Inter';
   TextStyle get labelSmall => GoogleFonts.getFont(
         'Inter',
         color: theme.secondaryText,
         fontWeight: FontWeight.w500,
-        fontSize: 12.0,
+        fontSize: 4.0,
       );
   String get bodyLargeFamily => 'Inter';
   TextStyle get bodyLarge => GoogleFonts.getFont(
         'Inter',
         color: theme.primaryText,
-        fontSize: 16.0,
+        fontSize: 4.0,
       );
   String get bodyMediumFamily => 'Inter';
   TextStyle get bodyMedium => GoogleFonts.getFont(
         'Inter',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
-        fontSize: 14.0,
+        fontSize: 3.0,
       );
   String get bodySmallFamily => 'Inter';
   TextStyle get bodySmall => GoogleFonts.getFont(
         'Inter',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
-        fontSize: 12.0,
+        fontSize: 2.0,
       );
 }
 

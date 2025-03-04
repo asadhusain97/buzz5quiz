@@ -5,6 +5,7 @@ import '/index.dart';
 import 'package:flutter/material.dart';
 import 'home_page_model.dart';
 export 'home_page_model.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
 class HomePageWidget extends StatefulWidget {
   const HomePageWidget({super.key});
@@ -77,11 +78,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 child: Padding(
                   padding:
                       EdgeInsetsDirectional.fromSTEB(50.0, 50.0, 50.0, 20.0),
-                  child: Text(
+                  child: Text(  // welcome msg
                     'Welcome to buzz5!',
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                    style: FlutterFlowTheme.of(context).titleLarge.override(
                           fontFamily: 'Inter',
-                          fontSize: 50.0,
                           letterSpacing: 0.0,
                         ),
                   ),
@@ -89,16 +89,16 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               ),
               Align(
                 alignment: AlignmentDirectional(0.0, 0.0),
-                child: Padding(
+                child: Padding( // start game button
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 50.0),
+                      EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
                   child: FFButtonWidget(
                     onPressed: () async {
                       context.pushNamed(InstructionsWidget.routeName);
                     },
                     text: 'Start a game',
                     options: FFButtonOptions(
-                      width: 200.0,
+                      width: 400.0,
                       height: 100.0,
                       padding:
                           EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
@@ -106,12 +106,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle:
-                          FlutterFlowTheme.of(context).titleSmall.override(
+                          FlutterFlowTheme.of(context).bodySmall.override(
                                 fontFamily: 'Inter',
                                 color: Colors.white,
-                                fontSize: 25.0,
+                                fontSize: 0.1,
                                 letterSpacing: 0.0,
-                              ),
+                          ),
                       elevation: 0.0,
                       borderRadius: BorderRadius.circular(24.0),
                     ),
@@ -120,25 +120,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 100.0),
-                child: FFButtonWidget(
+                child: FFButtonWidget( // join game button
                   onPressed: () async {
                     context.pushNamed(JoingameWidget.routeName);
                   },
                   text: 'Join a game',
                   options: FFButtonOptions(
-                    width: 200.0,
+                    width: 400.0,
                     height: 100.0,
                     padding:
                         EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                     iconPadding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).primary,
-                    textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                          fontFamily: 'Inter',
-                          color: Colors.white,
-                          fontSize: 25.0,
-                          letterSpacing: 0.0,
-                        ),
+                    textStyle: FlutterFlowTheme.of(context).bodySmall.override(
+                        fontFamily: 'Inter',
+                        color: Colors.white,
+                        fontSize: 25.0,
+                        letterSpacing: 0.0,
+                    ),
                     elevation: 0.0,
                     borderRadius: BorderRadius.circular(24.0),
                   ),
